@@ -1,0 +1,73 @@
+---
+title: Dum Search
+metaDescription: Search the web without AI. Dum Search is an easy way to perform Google Web searches, avoiding AI Overview results and other clutter.
+permalink: /index.html
+---
+
+<div class="flex h-full flex-col flex-wrap">
+  <div
+    class="mx-auto flex w-full max-w-xl flex-grow items-center justify-center px-4"
+  >
+    <div class="w-full pb-24 text-center md:pb-48">
+      <h1 class="mb-3 text-5xl font-bold text-zinc-900 dark:text-white">
+        Dum Search
+      </h1>
+      <p class="mb-6 text-lg text-zinc-700 dark:text-zinc-300">
+        Search the web without AI.
+      </p>
+      <form id="searchForm" class="relative flex flex-wrap items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          class="absolute top-0 ml-3 size-6 h-12 stroke-zinc-300 dark:stroke-zinc-500"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+          />
+        </svg>
+        <input
+          id="searchInput"
+          type="search"
+          name="search"
+          class="h-12 w-full rounded-lg border border-zinc-300 bg-transparent px-12 focus:outline-none dark:border-zinc-500 dark:text-white"
+          enterkeyhint="search"
+          aria-label="Enter you search term"
+        />
+        <button
+          id="clearButton"
+          type="button"
+          class="absolute right-0 top-0 hidden size-12 items-center justify-center rounded-lg text-zinc-500"
+          aria-label="Clear search input"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <div class="w-full pt-8 text-center">
+          <button
+            id="submitButton"
+            type="submit"
+            class="cursor-pointer rounded-lg bg-zinc-900 px-4 py-2 font-medium text-white transition-colors duration-300 hover:bg-zinc-700 hover:transition-colors hover:duration-300 disabled:cursor-default disabled:bg-zinc-100 disabled:text-zinc-500 disabled:hover:bg-zinc-100 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-300 dark:disabled:bg-zinc-700 dark:disabled:text-zinc-900 dark:disabled:hover:bg-zinc-700"
+            disabled
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

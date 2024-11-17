@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="h-full" lang="en">
+  {% include "components/head.html" %}
+
+  <body class="h-full bg-white dark:bg-zinc-900">
+    {{ content | safe }} {% if page.url === "/" %}
+    <a
+      class="fixed bottom-0 right-0 m-5 flex items-center justify-center rounded-full"
+      href="/about/"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        class="size-10 fill-zinc-900 transition-colors duration-300 hover:fill-zinc-700 md:size-12 dark:fill-white dark:hover:fill-zinc-300"
+        aria-label="What is Dum Search?"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </a>
+    {% endif %} {% if page.url === "/about/" %}
+    <a
+      class="fixed bottom-0 right-0 m-5 flex items-center justify-center rounded-full"
+      href="/"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        class="size-10 fill-zinc-900 transition-colors duration-300 hover:fill-zinc-700 md:size-12 dark:fill-white dark:hover:fill-zinc-300"
+        aria-label="Try searching with Dum Search"
+      >
+        <path
+          d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </a>
+    {% endif %}
+  </body>
+
+  {% if page.url === "/" %} {% set js %} {% include "script.js" %} {% endset %}
+  <!-- prettier-ignore -->
+  <script>{{ js | jsmin | safe }}</script>
+  {% endif %}
+</html>
